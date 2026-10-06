@@ -4,7 +4,7 @@ const express = require("express");
 const db = mysql.createPool({
     host: "student-databases.cvode4s4cwrc.us-west-2.rds.amazonaws.com",
     user: "ALANAHOWARD",
-    password: "YOUR_PASSWORD",
+    password: "VTrntkUzkNsLoTHZ1J9lhUR0zAq3uJEAq50",
     database: "ALANAHOWARD",
     waitForConnections: true,
     connectionLimit: 10,
