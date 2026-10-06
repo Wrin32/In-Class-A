@@ -21,7 +21,7 @@ app.post("/api/sensor", async (req, res) => {
 
     try {
         await db.execute(
-            "INSERT INTO sensor_data (light) VALUES (?)",
+            "INSERT INTO data_collection (light) VALUES (?)",
             [light]
         );
 
