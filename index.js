@@ -15,7 +15,7 @@ const app = express();
 
 app.use(express.json());
 
-app.post("/api/sensor", async (req, res) => {
+app.use("/api/sensor", async (req, res) => {
     console.log(req.body);
     const { light } = req.body;
 
