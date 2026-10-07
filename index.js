@@ -21,7 +21,7 @@ app.post("/api/sensor", async (req, res) => {
 
     try {
         const sql = `INSERT INTO sensor_data (light) VALUES (${light})`;
-        await db.query(sql);
+        await query(sql);
         console.log("Light value inserted:", light);
         );
 
