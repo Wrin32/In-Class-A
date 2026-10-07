@@ -20,19 +20,17 @@ app.post("/api/sensor", async (req, res) => {
     const { light } = req.body;
 
     try {
-        await db.execute(
-            "INSERT INTO data_collection (light) VALUES (?)",
-            [light]
+        const sql = `INSERT INTO sensor_data (light) VALUES (${light})`;
+        await db.query(sql);
+        console.log("Light value inserted:", light);
         );
 
-        console.log("Light data saved:", light);
-        
-        res.json({
-            message: "Light data received and saved"
+        res.json({ 
+            message: "Light data received" 
         });
 
     } catch (error) {
-        console.error("Database error:", error);
+        console.error(error);
 
         res.status(500).json({
             message: "Failed to save light data"
